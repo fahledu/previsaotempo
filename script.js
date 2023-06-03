@@ -3,7 +3,7 @@ const key = "71318a03d05babe4e58296dda507d912";
 
 document.addEventListener('DOMContentLoaded', () => {
     const updateWeatherData = (data) => {
-        document.querySelector('.city').innerHTML = `Tempo em ${data.name}`;
+        document.querySelector('.city').innerHTML = data.name;
         document.querySelector('.temp').innerHTML = `${Math.floor(data.main.temp)}ºC`;
         document.querySelector('.img-weather').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
         document.querySelector('.text-weather').innerHTML = `${data.weather[0].description}`;
